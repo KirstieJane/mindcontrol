@@ -22,8 +22,8 @@ The best way to ask for help is through the Brainhack slack team in the [#mindco
 ## Installation
 
 There are two options for installing MindControl:
-* Installation somewhere you have root access
-* Installation via Singularity (for example, on a univeristy compute cluster)
+* [Installation somewhere you have root access](#installation-where-you-have-root-access)
+* [Installation via Singularity (for example, on a univeristy compute cluster)](#build-and-deploy-with-singularity)
 
 ### Installation where you have root access
 
@@ -95,7 +95,7 @@ From inside the `mindcontrol` directory, run `start_singularity_mindcontrol.py`.
 ```
 cd mindcontrol
 python start_singularity_mindcontrol.py [name of the group you want to won mindcontrol files] \
-               —freesurfer_dir [path to directory containing subdirectories for all the subjects] \
+               -—freesurfer_dir [path to directory containing subdirectories for all the subjects] \
                --sing_out_dir [path where mindcontrol can output files] \
                --freesurfer
 ```
