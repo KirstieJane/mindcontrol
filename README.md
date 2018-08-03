@@ -65,11 +65,7 @@ Connect to the system where you'd like to host mindcontrol with a port forwarded
 ssh -L 3000:localhost:3000 server
 ```
 
-Or if you're already on that system, start a local server:
-
-```
-python -m http.server 3000
-```
+You don't need to do this step if you're planning on opening up a browser window on the same computer on which the data is stored.
 
 #### Install requirements
 
