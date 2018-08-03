@@ -10,14 +10,50 @@ MindControl is an app for quality control of neuroimaging pipeline outputs.
 Jump to the information you need:
 
 * [Contact](#contact)
+* [Checkout the demo](#demo)
 * [Installation](#installation)
   * [Installation where you have root access](#installation-where-you-have-root-access)
   * [Build and deploy with singularity](#build-and-deploy-with-singularity)
-* [Demo](#demo)
 
 ## Contact
 
 The best way to ask for help is through the Brainhack slack team in the [#mindcontrol channel](https://brainhack.slack.com/messages/C4TCFG99C/). You can get an invitation to join the slack community at https://brainhack-slack-invite.herokuapp.com. 
+
+## Demo
+
+Check out the [demo](http://mindcontrol.herokuapp.com/). [This data is from the 1000 Functional Connectomes Project](http://fcon_1000.projects.nitrc.org/fcpClassic/FcpTable.html)
+
+##### Things to do in the demo:
+
+* create an account by clicking **sign in** on the top navigation bar
+* click on a site (for example, Baltimore) to only show exams from that site
+* In the freesurfer table, click the select box to change the metric of the histogram
+
+![switch histograms](http://dxugxjm290185.cloudfront.net/demo_gifs/histogram_switch.gif)
+
+* Brush the histogram to filter the table, which only shows freesurfer id's that match the brush range 
+
+![brushing and viewing images](http://dxugxjm290185.cloudfront.net/demo_gifs/histogram_brushing_and_image_viewing.gif)
+
+* Save your filter by typing a name in the left text-box
+* Click 'reset' to undo the filtering
+* Click on a Freesurfer subject id to open a new window that shows the aparc+aseg file
+* Mark Pass, Fail, Needs Edits, or Edited, and leave some comments about the image. Click 'save'
+* You can log points
+
+![log points](http://dxugxjm290185.cloudfront.net/demo_gifs/logLesion.gif)
+
+* You can log curves
+
+![log curves](http://dxugxjm290185.cloudfront.net/demo_gifs/logContour.gif)
+
+* Edit voxels:
+
+![edit voxels](http://dxugxjm290185.cloudfront.net/demo_gifs/dura_edit.gif)
+
+* (beta) You can collaborate on the same image:
+
+![collaborate](http://dxugxjm290185.cloudfront.net/demo_gifs/syncedViewers.gif)
 
 ## Installation
 
@@ -113,7 +149,7 @@ Once that says `Starting mindcontrol and nginx`, you can `cat log/simg_out/mindc
 
 Once that says `App running at: http://localhost:2998/`, MindControl is all set up and running (but ignore that port number, it’s running on port 3000).
 
-### Using mindcontrol via Singularity
+### Using MindControl via Singularity
 
 Anyone who is a member of the group can connect to MindControl by typing `ssh -L 3000:localhost:3000` to the server and browse to http://localhost:3000 in their browser. They’ll be prompted to login with the username and password you created way back in [step 1](#run-setup-script).
 
@@ -121,43 +157,8 @@ Once you're done running MindControl you can stop it with `/bin/bash stop_mindco
 
 The next time a user in the appropriate group would like to start it, they should just run `/bin/bash start_mindcontrol.sh`. This will start the instance and restore the database from the previously dumped data.
 
-Don't use the `singularity instance.start` and `singularity instance.stop` commands, as the additional permissions fixing and database restoring or dumping won't run.
+:warning: Don't use the `singularity instance.start` and `singularity instance.stop` commands, as the additional permissions fixing and database restoring or dumping won't run.
 
 The startscript should write `my_readme.md` to the output directory you specify with instructions on running and connecting to the mindcontrol instance you've created with all of the appropriate paths and port numbers filled in. 
 
-## Demo
-
-Check out the [demo](http://mindcontrol.herokuapp.com/). [This data is from the 1000 Functional Connectomes Project](http://fcon_1000.projects.nitrc.org/fcpClassic/FcpTable.html)
-
-##### Things to do in the demo:
-
-* create an account by clicking **sign in** on the top navigation bar
-* click on a site (for example, Baltimore) to only show exams from that site
-* In the freesurfer table, click the select box to change the metric of the histogram
-
-![switch histograms](http://dxugxjm290185.cloudfront.net/demo_gifs/histogram_switch.gif)
-
-* Brush the histogram to filter the table, which only shows freesurfer id's that match the brush range 
-
-![brushing and viewing images](http://dxugxjm290185.cloudfront.net/demo_gifs/histogram_brushing_and_image_viewing.gif)
-
-* Save your filter by typing a name in the left text-box
-* Click 'reset' to undo the filtering
-* Click on a Freesurfer subject id to open a new window that shows the aparc+aseg file
-* Mark Pass, Fail, Needs Edits, or Edited, and leave some comments about the image. Click 'save'
-* You can log points
-
-![log points](http://dxugxjm290185.cloudfront.net/demo_gifs/logLesion.gif)
-
-* You can log curves
-
-![log curves](http://dxugxjm290185.cloudfront.net/demo_gifs/logContour.gif)
-
-* Edit voxels:
-
-![edit voxels](http://dxugxjm290185.cloudfront.net/demo_gifs/dura_edit.gif)
-
-* (beta) You can collaborate on the same image:
-
-![collaborate](http://dxugxjm290185.cloudfront.net/demo_gifs/syncedViewers.gif)
 
