@@ -47,12 +47,18 @@ Create a database json file similar to [http://dxugxjm290185.cloudfront.net/hbn/
 
 ### Build and deploy with singularity
 
-#### Connect (optional)
+#### Connect to the server
 
 Connect to the system where you'd like to host mindcontrol with a port forwarded:
 
 ```
 ssh -L 3000:localhost:3000 server
+```
+
+Or if you're already on that system, start a local server:
+
+```
+python -m http.server 3000
 ```
 
 #### Install requirements
