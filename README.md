@@ -1,8 +1,18 @@
 [![CircleCI](https://circleci.com/gh/Shotgunosine/mindcontrol/tree/master.svg?style=svg)](https://circleci.com/gh/Shotgunosine/mindcontrol/tree/master)
 [![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/1293)
 
-# mindcontrol
+# MindControl
+
 MindControl is an app for quality control of neuroimaging pipeline outputs.
+
+## Table of contents
+
+Jump to the information you need:
+
+* [Installation](#installation)
+  * [Installation where you have root access](#installation-where-you-have-root-access)
+  * [Build and deploy with singularity](#build-and-deploy-with-singularity)
+* [Demo](#demo)
 
 ## Installation
 
