@@ -82,10 +82,11 @@ Clone mindcontrol to a directory where you've got ~ 10 GB of free space.
 git clone https://github.com/Shotgunosine/mindcontrol
 ```
 
-Change the group ownership of the mindcontrol folder to whichever group will be using the MindControl instance. The `-R` flag recursively changes the ownership of all the files inside the folder.
+Change the group ownership of the mindcontrol folder to whichever group will be using the MindControl instance. The `-R` flag recursively changes the ownership of all the files inside the folder. Also set the default file permissions to be inclusive of all members of the group (here's [a nice explanation](https://askubuntu.com/questions/44542/what-is-umask-and-how-does-it-work/44548#44548))
 
 ```
 chown -R :[group name] mindcontrol
+umask 002
 ```
 
 #### Run setup script
