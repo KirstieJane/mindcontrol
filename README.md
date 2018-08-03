@@ -9,10 +9,15 @@ MindControl is an app for quality control of neuroimaging pipeline outputs.
 
 Jump to the information you need:
 
+* [Contact](#contact)
 * [Installation](#installation)
   * [Installation where you have root access](#installation-where-you-have-root-access)
   * [Build and deploy with singularity](#build-and-deploy-with-singularity)
 * [Demo](#demo)
+
+## Contact
+
+The best way to ask for help is through the Brainhack slack team in the [#mindcontrol channel](https://brainhack.slack.com/messages/C4TCFG99C/). You can get an invitation to join the slack community at https://brainhack-slack-invite.herokuapp.com. 
 
 ## Installation
 
