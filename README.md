@@ -77,7 +77,10 @@ From inside the `mindcontrol` directory, run `start_singularity_mindcontrol.py`.
 
 ```
 cd mindcontrol
-python start_singularity_mindcontrol.py [name of the group you want to won mindcontrol files] —freesurfer_dir [path to directory containing subdirectories for all the subjects] --sing_out_dir [path where mindcontrol can output files] --freesurfer
+python start_singularity_mindcontrol.py [name of the group you want to won mindcontrol files] \
+               —freesurfer_dir [path to directory containing subdirectories for all the subjects] \
+               --sing_out_dir [path where mindcontrol can output files] \
+               --freesurfer
 ```
 
 This command does a number of things:
