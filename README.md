@@ -151,7 +151,11 @@ Once that says `Starting mindcontrol and nginx`, you can `cat log/simg_out/mindc
 
 Once that says `App running at: http://localhost:2998/`, MindControl is all set up and running (but ignore that port number, it’s running on port 3000).
 
-:fire: WARNING! During this process you'll see output in the terminal that looks similar to the following block. THIS DOES NOT MEAN THE PROCESS IS COMPLETE! Do not terminate any processes until you can see `App running at: http://localhost:2998/` in `log/simg_out/mindcontrol.out`! :fire:
+:fire: WARNING! :fire:
+
+During this process you'll see output in the terminal that looks similar to the following block. THIS DOES NOT MEAN THE PROCESS IS COMPLETE!
+
+**Do not terminate any processes until you can see `App running at: http://localhost:2998/` in `log/simg_out/mindcontrol.out`.**
 
 ```bash
 Building Singularity image...
@@ -170,7 +174,7 @@ Anyone who is a member of the group can connect to MindControl by typing `ssh -L
 
 Once you're done running MindControl you can stop it with `/bin/bash stop_mindcontrol.sh`. This command dumps the databse to log/simg_out/mindcontrol.out and compresses any previous database dump if finds there. It also fixes permissions on all of the files in the mindcontrol directory, so it may take a while to run. Killing the script before it finishes may prevent another user from being able to run your mindcontrol instance.
 
-The next time a user in the appropriate group would like to start it, they should just run `/bin/bash start_mindcontrol.sh`. This will start the instance and restore the database from the previously dumped data.
+The next time a user in the appropriate group would like to start it, they should just run `/bin/bash start_mindcontrol.sh`. This will start the instance and restore the database from the previously dumped data. Note that this process takes a while (as described above). You'll be ready to run mindcontrol again when you see `App running at: http://localhost:2998/` in `log/simg_out/mindcontrol.out`.
 
 :warning: Don't use the `singularity instance.start` and `singularity instance.stop` commands, as the additional permissions fixing and database restoring or dumping won't run.
 
