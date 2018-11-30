@@ -151,6 +151,19 @@ Once that says `Starting mindcontrol and nginx`, you can `cat log/simg_out/mindc
 
 Once that says `App running at: http://localhost:2998/`, MindControl is all set up and running (but ignore that port number, it’s running on port 3000).
 
+:fire: WARNING! During this process you'll see output in the terminal that looks similar to the following block. THIS DOES NOT MEAN THE PROCESS IS COMPLETE! Do not terminate any processes until you can see `App running at: http://localhost:2998/` in `log/simg_out/mindcontrol.out`! :fire:
+
+```bash
+Building Singularity image...
+Singularity container built: /lustre/scratch/wbic-beta/NSPN-data-mgmt/KW_MINDCONTROL/mc_service.simg
+Cleaning up...
+/bin/bash /lustre/scratch/wbic-beta/NSPN-data-mgmt/KW_MINDCONTROL/start_mindcontrol.sh
+To stop the mindcontrol server run:
+/bin/bash /lustre/scratch/wbic-beta/NSPN-data-mgmt/KW_MINDCONTROL/stop_mindcontrol.sh
+```
+
+We recommend running the `top` command in a different window so you can monitor the process :smiley_cat:
+
 ### Using MindControl via Singularity
 
 Anyone who is a member of the group can connect to MindControl by typing `ssh -L 3000:localhost:3000` to the server and browse to http://localhost:3000 in their browser. They’ll be prompted to login with the username and password you created way back in [step 1](#run-setup-script).
